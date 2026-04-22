@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SteamApp</string>
+    <string name="footer_text">Developed by Wassim Messaoud</string>
 </resources>

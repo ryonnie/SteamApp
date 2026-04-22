@@ -141,5 +141,14 @@
             android:clickable="true"
             android:focusable="true"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/footer_text"
+            android:textColor="#66c0f4"
+            android:textAlignment="center"
+            android:padding="24dp"
+            android:textSize="12sp" />
+
     </LinearLayout>
 </ScrollView>
