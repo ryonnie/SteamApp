@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SteamApp
 
 A mobile Steam-inspired application built for Android. This app allows users to browse a game store, manage their account, purchase games using a virtual wallet, and leave reviews. It also includes a comprehensive Admin panel for managing users and store listings.
@@ -46,3 +47,6 @@ A mobile Steam-inspired application built for Android. This app allows users to 
 
 ## 📝 License
 This project is licensed under the MIT License.
+=======
+
+>>>>>>> 31a5fe7ccab87271e678ffd26fe2fcd164abeffa
