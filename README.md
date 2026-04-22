@@ -25,8 +25,6 @@ A mobile Steam-inspired application built for Android. This app allows users to 
 - **Architecture**: Fragments & Activity-based navigation
 - **Components**: RecyclerView, BottomNavigationView, Activity Result API (for image picking)
 
-## 📸 Screenshots
-*(Add your screenshots here)*
 
 ## ⚙️ Installation & Setup
 1. Clone the repository:
