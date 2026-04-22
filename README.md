@@ -1,224 +1,48 @@
-# SteamApp - Game Store Android Application
+# SteamApp
 
-A feature-rich Android application that simulates a Steam-like digital game store platform. Users can authenticate, browse games, make purchases, write reviews, and manage their game library.
+A mobile Steam-inspired application built for Android. This app allows users to browse a game store, manage their account, purchase games using a virtual wallet, and leave reviews. It also includes a comprehensive Admin panel for managing users and store listings.
 
-## 📱 Features
+## 🚀 Features
 
-- **User Authentication**
-  - User registration and login system
-  - Secure account management
-  - Session persistence
+### For Users
+- **User Authentication**: Secure Login and Registration system with a "Remember Me" feature.
+- **Game Store**: Browse a variety of games with search functionality.
+- **Game Details**: View detailed information about games, including pricing and user reviews.
+- **Purchase System**: Buy games using a virtual Steam Wallet. Successful purchases generate unique CD keys.
+- **Review System**: Rate games and write reviews to share your experience.
+- **Purchase History**: Keep track of all your bought games and their CD keys.
+- **Account Management**: Update your profile picture and view your current wallet balance.
 
-- **Game Store**
-  - Browse available games
-  - Search and filter functionality
-  - Game details and descriptions
-  - Purchase games directly from the app
+### For Admins
+- **User Management**: View all registered users, update their wallet balances, or delete accounts.
+- **Store Management**: Manage game listings and apply discounts to specific titles.
+- **Admin Dashboard**: A dedicated interface to oversee the entire platform's activity.
 
-- **User Account Management**
-  - View account details
-  - Manage purchased games
-  - Update profile information
-
-- **Purchase History**
-  - View all past purchases
-  - Track transaction history
-  - Receipt management
-
-- **Review System**
-  - Write and read game reviews
-  - Rate games
-  - Community feedback
-
-- **Admin Panel**
-  - Manage games (add/edit/delete)
-  - Manage users
-  - Monitor store activity
-  - View platform statistics
-
-## 🛠 Tech Stack
-
+## 🛠️ Tech Stack
 - **Language**: Java
-- **Platform**: Android (API 29+)
-- **Target SDK**: Android 14 (API 36)
-- **UI Framework**: AndroidX Material Design
-- **Database**: SQLite (via DatabaseHelper)
-- **Build System**: Gradle with Kotlin DSL
+- **UI Framework**: Android XML / Material Components
+- **Database**: SQLite (via `DatabaseHelper`)
+- **Architecture**: Fragments & Activity-based navigation
+- **Components**: RecyclerView, BottomNavigationView, Activity Result API (for image picking)
 
-## 📋 Project Structure
+## 📸 Screenshots
+*(Add your screenshots here)*
 
-```
-SteamApp/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── AndroidManifest.xml       # App manifest configuration
-│   │   │   ├── java/com/example/steamapp/
-│   │   │   │   ├── Activities/
-│   │   │   │   │   ├── LoginActivity.java
-│   │   │   │   │   ├── RegisterActivity.java
-│   │   │   │   │   └── MainActivity.java
-│   │   │   │   ├── Fragments/
-│   │   │   │   │   ├── StoreFragment.java
-│   │   │   │   │   ├── AccountFragment.java
-│   │   │   │   │   ├── HistoryFragment.java
-│   │   │   │   │   └── AdminFragment.java
-│   │   │   │   ├── Models/
-│   │   │   │   │   ├── Game.java
-│   │   │   │   │   ├── Purchase.java
-│   │   │   │   │   └── Review.java
-│   │   │   │   ├── Adapters/
-│   │   │   │   │   ├── GameAdapter.java
-│   │   │   │   │   ├── PurchaseAdapter.java
-│   │   │   │   │   ├── ReviewAdapter.java
-│   │   │   │   │   ├── AdminGameAdapter.java
-│   │   │   │   │   └── AdminUserAdapter.java
-│   │   │   │   └── DatabaseHelper.java   # SQLite database operations
-│   │   │   └── res/                      # Resources (layouts, strings, etc.)
-│   │   ├── test/                         # Unit tests
-│   │   └── androidTest/                  # Android instrumentation tests
-│   └── build.gradle.kts                  # App-level build configuration
-├── build.gradle.kts                      # Project-level build configuration
-├── settings.gradle.kts                   # Settings and module configuration
-└── gradle/                               # Gradle wrapper and configuration
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Android Studio (latest version recommended)
-- JDK 11 or higher
-- Android SDK 36 (API level 36)
-- Minimum Android version 10 (API 29)
-
-### Installation
-
-1. **Clone the repository**
+## ⚙️ Installation & Setup
+1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/SteamApp.git
-   cd SteamApp
+   git clone https://github.com/your-username/SteamApp.git
    ```
+2. Open the project in **Android Studio**.
+3. Sync the project with Gradle files.
+4. Run the app on an emulator or a physical Android device.
 
-2. **Open in Android Studio**
-   - Launch Android Studio
-   - Select "Open an Existing Project"
-   - Navigate to the SteamApp directory
-   - Wait for Gradle sync to complete
+## 📁 Project Structure
+- `AccountFragment.java`: Manages profile settings and wallet view.
+- `StoreFragment.java`: The main hub for browsing and searching games.
+- `HistoryFragment.java`: Displays the user's past purchases.
+- `AdminFragment.java`: Entry point for administrative tasks.
+- `DatabaseHelper.java`: Handles all CRUD operations for users, games, purchases, and reviews.
 
-3. **Build the project**
-   ```bash
-   ./gradlew build
-   ```
-
-4. **Run on emulator or device**
-   - Connect an Android device or start an emulator
-   - Click "Run" or press `Shift + F10` in Android Studio
-   - The app will launch with the LoginActivity
-
-## 📲 Usage
-
-### User Registration & Login
-1. Launch the app
-2. New users can tap "Register" to create an account
-3. Existing users can login with their credentials
-4. Upon successful login, navigate to MainActivity
-
-### Browsing the Store
-- **Store Fragment**: Browse available games with descriptions and prices
-- **Game Details**: Tap a game to view more information
-- **Purchase**: Add games to your library
-
-### Managing Your Account
-- **Account Fragment**: View profile, purchased games, and account settings
-- **History Fragment**: Check your purchase history and receipts
-
-### Writing Reviews
-- Go to a game's detail page
-- Write a review and rate the game (1-5 stars)
-- Submit to share with the community
-
-### Admin Features
-- Access admin panel (for admin accounts)
-- Manage games: add new titles, edit details, remove games
-- Monitor user activity
-- View platform analytics
-
-## 🔧 Configuration
-
-### Gradle Properties
-Key dependencies are configured in `gradle/libs.versions.toml`:
-- AndroidX AppCompat
-- Material Design components
-- ConstraintLayout for UI
-- JUnit for testing
-- Espresso for UI testing
-
-### Build Variants
-- **Debug**: Development build with debugging enabled
-- **Release**: Optimized production build with ProGuard obfuscation
-
-## 🗄 Database
-
-The app uses SQLite for local data persistence via `DatabaseHelper`:
-- User account information
-- Game catalog and metadata
-- Purchase records
-- User reviews and ratings
-
-## 🧪 Testing
-
-### Unit Tests
-```bash
-./gradlew test
-```
-
-### Android Instrumentation Tests
-```bash
-./gradlew connectedAndroidTest
-```
-
-## 📦 Building for Release
-
-```bash
-./gradlew assembleRelease
-```
-
-The signed APK will be available in `app/build/outputs/apk/release/`
-
-## 🤝 Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👨‍💻 Author
-
-**Your Name/Username**
-- GitHub: [@yourusername](https://github.com/yourusername)
-
-## 📞 Support
-
-For support, email your.email@example.com or open an issue on GitHub.
-
-## 🎮 Future Enhancements
-
-- [ ] Cloud sync for user accounts
-- [ ] Wishlist feature
-- [ ] Game recommendations
-- [ ] Multiplayer achievements
-- [ ] In-app messaging between users
-- [ ] Push notifications for sales
-- [ ] Dark mode support
-- [ ] Localization for multiple languages
-
----
-
-**Happy coding! 🚀**
+## 📝 License
+This project is licensed under the MIT License.
