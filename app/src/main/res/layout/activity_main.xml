@@ -25,6 +25,20 @@
         app:itemIconTint="#66c0f4"
         app:itemTextColor="#66c0f4"
         app:menu="@menu/bottom_nav_menu"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/footer" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© Wassim Messaoud"
+        android:textColor="#66c0f4"
+        android:textAlignment="center"
+        android:padding="12dp"
+        android:background="#171a21"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
